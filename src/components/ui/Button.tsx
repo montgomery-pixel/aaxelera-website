@@ -21,7 +21,7 @@ export default function Button({
   const url = href || CALENDLY_URL;
 
   const base =
-    "bg-white/[0.06] text-white/70 border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/[0.15] hover:text-white backdrop-blur-xl";
+    "bg-black text-white/70 border border-white/[0.2] hover:bg-black hover:border-white/[0.4] hover:text-white";
 
   return (
     <motion.a
