@@ -8,22 +8,18 @@ import { COPY, METRICS, SECTION_IDS } from "@/lib/constants";
 
 const icons: Record<string, React.ReactNode> = {
   target: (
-    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="6" />
-      <circle cx="12" cy="12" r="2" />
+    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
     </svg>
   ),
   check: (
-    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M20 6L9 17l-5-5" />
-      <circle cx="12" cy="12" r="10" />
+    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M20 6L9 17l-5-5" /><circle cx="12" cy="12" r="10" />
     </svg>
   ),
   clock: (
-    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 6v6l4 2" />
+    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
     </svg>
   ),
 };
@@ -42,7 +38,7 @@ export default function CorePromise() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white tracking-tight">
             {COPY.promise.heading}
           </h2>
-          <p className="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-white/40 text-base max-w-2xl mx-auto leading-relaxed font-light">
             {COPY.promise.body}
           </p>
         </motion.div>
@@ -57,7 +53,7 @@ export default function CorePromise() {
               transition={{ duration: 0.5, delay: i * 0.15 }}
             >
               <GlassCard className="text-center h-full">
-                <div className="text-cyan-400 mb-4 flex justify-center">
+                <div className="text-white/50 mb-4 flex justify-center">
                   {icons[metric.icon]}
                 </div>
                 <div className="text-4xl md:text-5xl font-bold mb-3">
@@ -67,10 +63,10 @@ export default function CorePromise() {
                     suffix={metric.suffix}
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">
+                <h3 className="text-base font-medium text-white mb-2">
                   {metric.label}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-white/35 text-sm leading-relaxed font-light">
                   {metric.description}
                 </p>
               </GlassCard>

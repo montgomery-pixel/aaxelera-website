@@ -21,10 +21,10 @@ export default function Button({
   const url = href || CALENDLY_URL;
 
   const primaryStyles =
-    "bg-white/[0.1] text-white border border-white/[0.15] hover:bg-white/[0.18] hover:border-white/[0.25] backdrop-blur-xl";
+    "bg-white/[0.08] text-white border border-white/[0.12] hover:bg-white/[0.15] hover:border-white/[0.25] backdrop-blur-xl";
 
   const secondaryStyles =
-    "bg-white/[0.05] text-gray-300 border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/[0.15] backdrop-blur-xl";
+    "bg-transparent text-white/60 border border-white/[0.06] hover:bg-white/[0.05] hover:text-white/80 hover:border-white/[0.12] backdrop-blur-xl";
 
   return (
     <motion.a
@@ -33,8 +33,8 @@ export default function Button({
       rel="noopener noreferrer"
       onClick={onClick}
       className={`
-        inline-flex items-center justify-center text-[14px] font-medium tracking-wide
-        rounded-full px-7 py-3 cursor-pointer transition-all duration-300
+        inline-flex items-center justify-center text-[13px] font-medium tracking-[0.05em] uppercase
+        rounded-full px-7 py-3 cursor-pointer transition-all duration-400
         ${variant === "primary" ? primaryStyles : secondaryStyles}
         ${className}
       `}
