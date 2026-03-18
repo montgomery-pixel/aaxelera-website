@@ -26,7 +26,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="gradient-text-animate">
+            <span className="text-white">
               {COPY.finalCta.heading}
             </span>
           </h2>

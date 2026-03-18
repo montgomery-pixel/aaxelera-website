@@ -45,7 +45,7 @@ export default function AnimatedCounter({
   }, [inView, value, duration, motionValue, rounded]);
 
   return (
-    <span ref={ref} className={`gradient-text-animate ${className}`}>
+    <span ref={ref} className={`bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent ${className}`}>
       {prefix}
       {displayValue}
       {suffix}

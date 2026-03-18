@@ -39,10 +39,10 @@ export default function CorePromise() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="gradient-text">{COPY.promise.heading}</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white tracking-tight">
+            {COPY.promise.heading}
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-base max-w-2xl mx-auto leading-relaxed font-light">
             {COPY.promise.body}
           </p>
         </motion.div>

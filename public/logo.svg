@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Main triangle - left face (darker) -->
+  <path d="M24 4L6 40h18V4z" fill="url(#leftFace)"/>
+  <!-- Main triangle - right face (lighter) -->
+  <path d="M24 4l18 36H24V4z" fill="url(#rightFace)"/>
+  <!-- Inner fold line - creates the faceted look -->
+  <path d="M24 4v36" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+  <!-- Highlight edge on right -->
+  <path d="M24 4l18 36" stroke="url(#edgeHighlight)" stroke-width="0.5"/>
+  <!-- Top highlight -->
+  <path d="M24 4L20 12h8L24 4z" fill="url(#topHighlight)" opacity="0.6"/>
+  <defs>
+    <linearGradient id="leftFace" x1="6" y1="40" x2="24" y2="4">
+      <stop offset="0%" stop-color="#1a3a5c"/>
+      <stop offset="100%" stop-color="#2d5a8e"/>
+    </linearGradient>
+    <linearGradient id="rightFace" x1="42" y1="40" x2="24" y2="4">
+      <stop offset="0%" stop-color="#2d5a8e"/>
+      <stop offset="100%" stop-color="#4a8ec9"/>
+    </linearGradient>
+    <linearGradient id="edgeHighlight" x1="24" y1="4" x2="42" y2="40">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.4)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
+    </linearGradient>
+    <linearGradient id="topHighlight" x1="24" y1="4" x2="24" y2="12">
+      <stop offset="0%" stop-color="#6bb5f0"/>
+      <stop offset="100%" stop-color="#4a8ec9"/>
+    </linearGradient>
+  </defs>
+</svg>

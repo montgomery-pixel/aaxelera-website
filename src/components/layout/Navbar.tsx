@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { NAV_LINKS, CALENDLY_URL } from "@/lib/constants";
 
 export default function Navbar() {
@@ -29,29 +30,37 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Scroll progress bar */}
       <ScrollProgress />
 
       <motion.nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#0a0a1a]/80 backdrop-blur-xl border-b border-white/5"
+            ? "bg-[#0a0a1a]/70 backdrop-blur-2xl border-b border-white/[0.04]"
             : "bg-transparent"
         }`}
         animate={{ y: hidden ? -100 : 0 }}
         transition={{ duration: 0.3 }}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Logo + Name */}
           <a
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
               handleNavClick("#hero");
             }}
-            className="text-xl md:text-2xl font-bold tracking-tight"
+            className="flex items-center gap-2.5"
           >
-            <span className="gradient-text">Aaxelera</span>
+            <Image
+              src="/logo.svg"
+              alt="Aaxelera"
+              width={28}
+              height={28}
+              className="w-7 h-7"
+            />
+            <span className="text-xl font-bold tracking-tight text-white">
+              Aaxelera
+            </span>
           </a>
 
           {/* Desktop nav */}
@@ -64,7 +73,7 @@ export default function Navbar() {
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-[13px] text-gray-400 hover:text-white transition-colors duration-300 tracking-wide"
               >
                 {link.label}
               </a>
@@ -73,7 +82,7 @@ export default function Navbar() {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center text-sm font-semibold rounded-lg px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center text-[13px] font-medium rounded-full px-5 py-2 bg-white text-[#0a0a1a] hover:bg-gray-100 transition-all duration-300 tracking-wide"
             >
               Book a Strategy Call
             </a>
@@ -86,16 +95,16 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <motion.span
-              className="w-6 h-0.5 bg-white block"
-              animate={isOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
+              className="w-5 h-[1.5px] bg-white block"
+              animate={isOpen ? { rotate: 45, y: 3.5 } : { rotate: 0, y: 0 }}
             />
             <motion.span
-              className="w-6 h-0.5 bg-white block"
+              className="w-5 h-[1.5px] bg-white block"
               animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
             />
             <motion.span
-              className="w-6 h-0.5 bg-white block"
-              animate={isOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
+              className="w-5 h-[1.5px] bg-white block"
+              animate={isOpen ? { rotate: -45, y: -3.5 } : { rotate: 0, y: 0 }}
             />
           </button>
         </div>
@@ -105,7 +114,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-[#0a0a1a]/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-40 bg-[#0a0a1a]/98 backdrop-blur-2xl flex flex-col items-center justify-center gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -119,10 +128,10 @@ export default function Navbar() {
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className="text-2xl text-gray-300 hover:text-white transition-colors"
+                className="text-2xl text-gray-300 hover:text-white transition-colors tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.08 }}
               >
                 {link.label}
               </motion.a>
@@ -131,10 +140,10 @@ export default function Navbar() {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center text-base font-semibold rounded-xl px-8 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 mt-4"
+              className="inline-flex items-center justify-center text-base font-medium rounded-full px-8 py-3 bg-white text-[#0a0a1a] mt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: NAV_LINKS.length * 0.1 }}
+              transition={{ delay: NAV_LINKS.length * 0.08 }}
             >
               Book a Strategy Call
             </motion.a>
@@ -151,7 +160,8 @@ function ScrollProgress() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       setProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -160,10 +170,10 @@ function ScrollProgress() {
 
   return (
     <div
-      className="fixed top-0 left-0 h-[3px] z-[9999]"
+      className="fixed top-0 left-0 h-[2px] z-[9999]"
       style={{
         width: `${progress}%`,
-        background: "linear-gradient(90deg, #00d4ff, #3b82f6, #f59e0b)",
+        background: "linear-gradient(90deg, #00d4ff, #3b82f6)",
       }}
     />
   );

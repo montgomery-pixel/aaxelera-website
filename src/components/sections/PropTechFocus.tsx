@@ -32,7 +32,7 @@ export default function PropTechFocus() {
                   </svg>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold">
-                  <span className="gradient-text">{COPY.proptech.heading}</span>
+                  <span className="text-white">{COPY.proptech.heading}</span>
                 </h2>
               </div>
 

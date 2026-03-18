@@ -44,7 +44,7 @@ export default function Solution() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="gradient-text">{COPY.solution.heading}</span>
+            <span className="text-white">{COPY.solution.heading}</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {COPY.solution.subheading}

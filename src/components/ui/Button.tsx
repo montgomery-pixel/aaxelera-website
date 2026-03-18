@@ -21,10 +21,10 @@ export default function Button({
   const url = href || CALENDLY_URL;
 
   const primaryStyles =
-    "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:from-cyan-400 hover:to-blue-500";
+    "bg-white text-[#0a0a1a] hover:bg-gray-100";
 
   const secondaryStyles =
-    "bg-transparent text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20";
+    "bg-white/[0.06] text-white border border-white/[0.1] hover:bg-white/[0.1] hover:border-white/[0.2]";
 
   return (
     <motion.a
@@ -33,12 +33,12 @@ export default function Button({
       rel="noopener noreferrer"
       onClick={onClick}
       className={`
-        inline-flex items-center justify-center text-base font-semibold
-        rounded-xl px-8 py-3.5 cursor-pointer transition-all duration-300
+        inline-flex items-center justify-center text-[14px] font-medium tracking-wide
+        rounded-full px-7 py-3 cursor-pointer transition-all duration-300
         ${variant === "primary" ? primaryStyles : secondaryStyles}
         ${className}
       `}
-      whileHover={{ scale: 1.03, y: -2 }}
+      whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
       {children}

@@ -8,13 +8,17 @@ const containerVariants = {
   hidden: { opacity: 0 } as const,
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
   } as const,
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 } as const,
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+  hidden: { opacity: 0, y: 20 } as const,
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" as const },
+  },
 };
 
 export default function Hero() {
@@ -23,12 +27,12 @@ export default function Hero() {
       id={SECTION_IDS.hero}
       className="relative min-h-screen flex items-center justify-center px-6"
     >
-      {/* Radial glow behind headline */}
+      {/* Subtle radial glow */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(0,212,255,0.08) 0%, rgba(59,130,246,0.04) 40%, transparent 70%)",
+            "radial-gradient(circle, rgba(0,212,255,0.04) 0%, rgba(59,130,246,0.02) 40%, transparent 70%)",
         }}
       />
 
@@ -39,24 +43,25 @@ export default function Hero() {
         animate="visible"
       >
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6"
           variants={itemVariants}
         >
-          {COPY.hero.headline}{" "}
-          <span className="gradient-text-animate">
+          <span className="text-white">{COPY.hero.headline}</span>
+          <br />
+          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             {COPY.hero.headlineHighlight}
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-base md:text-lg text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed font-light"
           variants={itemVariants}
         >
           {COPY.hero.subheadline}
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-3 justify-center items-center"
           variants={itemVariants}
         >
           <Button variant="primary">{COPY.hero.cta}</Button>
@@ -65,17 +70,17 @@ export default function Hero() {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -bottom-16 left-1/2 -translate-x-1/2"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
         >
           <svg
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="rgba(0,212,255,0.4)"
-            strokeWidth="2"
+            stroke="rgba(255,255,255,0.2)"
+            strokeWidth="1.5"
           >
             <path d="M12 5v14M5 12l7 7 7-7" />
           </svg>
