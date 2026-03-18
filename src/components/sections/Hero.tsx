@@ -6,6 +6,10 @@ import Button from "@/components/ui/Button";
 import { COPY, SECTION_IDS } from "@/lib/constants";
 
 const Globe = dynamic(() => import("@/components/effects/Globe"), { ssr: false });
+const ShaderLines = dynamic(
+  () => import("@/components/ui/shader-lines").then((m) => ({ default: m.ShaderAnimation })),
+  { ssr: false }
+);
 
 const containerVariants = {
   hidden: { opacity: 0 } as const,
@@ -28,8 +32,13 @@ export default function Hero() {
   return (
     <section
       id={SECTION_IDS.hero}
-      className="relative min-h-screen flex items-center justify-center px-6"
+      className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
     >
+      {/* Shader lines background */}
+      <div className="absolute inset-0 opacity-30">
+        <ShaderLines />
+      </div>
+
       {/* 3D Globe */}
       <Globe />
 
