@@ -82,7 +82,7 @@ export default function Navbar() {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center text-[13px] font-medium rounded-full px-5 py-2 bg-white text-[#0a0a1a] hover:bg-gray-100 transition-all duration-300 tracking-wide"
+              className="inline-flex items-center justify-center text-[13px] font-medium rounded-full px-5 py-2 bg-white/[0.1] text-white border border-white/[0.15] hover:bg-white/[0.18] hover:border-white/[0.25] backdrop-blur-xl transition-all duration-300 tracking-wide"
             >
               Book a Strategy Call
             </a>
@@ -140,7 +140,7 @@ export default function Navbar() {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center text-base font-medium rounded-full px-8 py-3 bg-white text-[#0a0a1a] mt-4"
+              className="inline-flex items-center justify-center text-base font-medium rounded-full px-8 py-3 bg-white/[0.1] text-white border border-white/[0.15] backdrop-blur-xl mt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: NAV_LINKS.length * 0.08 }}
