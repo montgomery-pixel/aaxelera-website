@@ -4,12 +4,14 @@
   <path d="M50 2L5 63h45V2z" fill="#1a1a1a"/>
   <!-- Right face -->
   <path d="M50 2l45 61H50V2z" fill="#333333"/>
-  <!-- Capstone - same angle as main pyramid, just the top portion -->
-  <path d="M50 2L36 24.4h28L50 2z" fill="#4a4a4a"/>
+  <!-- Capstone - edges match exact slope of pyramid at y=22 -->
+  <!-- At y=22: left edge = 5 + 45*(20/61) = 19.75, right edge = 95 - 45*(20/61) = 80.25 -->
+  <path d="M50 2L19.75 22h60.5L50 2z" fill="#4a4a4a"/>
+  <!-- Capstone separation line -->
+  <path d="M19.75 22h60.5" stroke="#555555" stroke-width="0.4"/>
   <!-- Edge lines -->
   <path d="M5 63L50 2" stroke="#555555" stroke-width="0.4"/>
   <path d="M95 63L50 2" stroke="#666666" stroke-width="0.4"/>
-  <path d="M50 24.4v38.6" stroke="#2a2a2a" stroke-width="0.25"/>
-  <!-- Capstone separation line -->
-  <path d="M36 24.4h28" stroke="#555555" stroke-width="0.3"/>
+  <!-- Center crease below capstone -->
+  <path d="M50 22v41" stroke="#2a2a2a" stroke-width="0.25"/>
 </svg>

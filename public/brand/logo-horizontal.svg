@@ -1,18 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none">
   <!-- Pyramid icon -->
   <g transform="translate(10, 5)">
-    <!-- Left face -->
     <path d="M35 2L3 63h32V2z" fill="#1a1a1a"/>
-    <!-- Right face -->
     <path d="M35 2l32 61H35V2z" fill="#333333"/>
-    <!-- Capstone -->
-    <path d="M35 2L25 21.6h20L35 2z" fill="#4a4a4a"/>
-    <!-- Capstone separation -->
-    <path d="M25 21.6h20" stroke="#555555" stroke-width="0.4"/>
-    <!-- Edges -->
+    <!-- Capstone matching slope at y=22 -->
+    <path d="M35 2L13.8 22h42.4L35 2z" fill="#4a4a4a"/>
+    <path d="M13.8 22h42.4" stroke="#555555" stroke-width="0.4"/>
     <path d="M3 63L35 2" stroke="#555555" stroke-width="0.4"/>
     <path d="M67 63L35 2" stroke="#666666" stroke-width="0.4"/>
-    <path d="M35 21.6v41.4" stroke="#2a2a2a" stroke-width="0.25"/>
+    <path d="M35 22v41" stroke="#2a2a2a" stroke-width="0.25"/>
   </g>
 
   <!-- Brand name -->
