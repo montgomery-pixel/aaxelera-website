@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import Button from "@/components/ui/Button";
 import { COPY, SECTION_IDS } from "@/lib/constants";
+
+const Globe = dynamic(() => import("@/components/effects/Globe"), { ssr: false });
 
 const containerVariants = {
   hidden: { opacity: 0 } as const,
@@ -27,14 +30,8 @@ export default function Hero() {
       id={SECTION_IDS.hero}
       className="relative min-h-screen flex items-center justify-center px-6"
     >
-      {/* Subtle radial glow */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(0,212,255,0.04) 0%, rgba(59,130,246,0.02) 40%, transparent 70%)",
-        }}
-      />
+      {/* 3D Globe */}
+      <Globe />
 
       <motion.div
         className="relative z-10 max-w-4xl mx-auto text-center"
