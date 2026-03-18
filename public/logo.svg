@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 52" fill="none">
   <!-- Left face - darkest -->
-  <path d="M32 6L8 54h24V6z" fill="#1a1a1a"/>
+  <path d="M40 4L6 48h34V4z" fill="#1a1a1a"/>
   <!-- Right face - medium -->
-  <path d="M32 6l24 48H32V6z" fill="#333333"/>
+  <path d="M40 4l34 44H40V4z" fill="#333333"/>
   <!-- Top highlight facet -->
-  <path d="M32 6L26 18h12L32 6z" fill="#4a4a4a"/>
+  <path d="M40 4L33 16h14L40 4z" fill="#4a4a4a"/>
   <!-- Left edge highlight -->
-  <path d="M8 54L32 6" stroke="#555555" stroke-width="0.5"/>
+  <path d="M6 48L40 4" stroke="#555555" stroke-width="0.5"/>
   <!-- Right edge highlight -->
-  <path d="M56 54L32 6" stroke="#666666" stroke-width="0.5"/>
+  <path d="M74 48L40 4" stroke="#666666" stroke-width="0.5"/>
   <!-- Center crease -->
-  <path d="M32 6v48" stroke="#2a2a2a" stroke-width="0.3"/>
+  <path d="M40 4v44" stroke="#2a2a2a" stroke-width="0.3"/>
   <!-- Subtle top shine -->
-  <path d="M32 6L28 14h8L32 6z" fill="#888888" opacity="0.3"/>
+  <path d="M40 4L35 12h10L40 4z" fill="#888888" opacity="0.3"/>
 </svg>

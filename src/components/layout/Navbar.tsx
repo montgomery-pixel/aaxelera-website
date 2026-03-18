@@ -65,7 +65,7 @@ export default function Navbar() {
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-[12px] font-medium tracking-[0.08em] uppercase rounded-full px-5 py-2 bg-white/[0.08] text-white/80 border border-white/[0.1] hover:bg-white/[0.15] hover:border-white/[0.2] backdrop-blur-xl transition-all duration-300"
+            className="inline-flex items-center text-[12px] font-medium tracking-[0.08em] uppercase rounded-full px-5 py-2 bg-white/[0.06] text-white/70 border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/[0.15] hover:text-white backdrop-blur-xl transition-all duration-300"
           >
             Book a Strategy Call
           </a>

@@ -22,7 +22,7 @@ const StarfieldWrapper = dynamic(
 const GlslHillsBg = dynamic(
   () =>
     import("@/components/ui/glsl-hills").then((m) => ({
-      default: m.GlslHills,
+      default: m.GLSLHills,
     })),
   { ssr: false }
 );
