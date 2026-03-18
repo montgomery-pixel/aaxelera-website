@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" fill="none">
+  <!-- Standalone pyramid icon - high res for print -->
+  <!-- Left face -->
+  <path d="M100 4L10 126h90V4z" fill="#1a1a1a"/>
+  <!-- Right face -->
+  <path d="M100 4l90 122H100V4z" fill="#333333"/>
+  <!-- Capstone - matching slope angle -->
+  <path d="M100 4L72 48.8h56L100 4z" fill="#4a4a4a"/>
+  <!-- Capstone separation line -->
+  <path d="M72 48.8h56" stroke="#555555" stroke-width="0.6"/>
+  <!-- Edge lines -->
+  <path d="M10 126L100 4" stroke="#555555" stroke-width="0.6"/>
+  <path d="M190 126L100 4" stroke="#666666" stroke-width="0.6"/>
+  <!-- Center crease below capstone -->
+  <path d="M100 48.8v77.2" stroke="#2a2a2a" stroke-width="0.4"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none">
+  <!-- Pyramid icon -->
+  <g transform="translate(10, 5)">
+    <!-- Left face -->
+    <path d="M35 2L3 63h32V2z" fill="#1a1a1a"/>
+    <!-- Right face -->
+    <path d="M35 2l32 61H35V2z" fill="#333333"/>
+    <!-- Capstone -->
+    <path d="M35 2L25 21.6h20L35 2z" fill="#4a4a4a"/>
+    <!-- Capstone separation -->
+    <path d="M25 21.6h20" stroke="#555555" stroke-width="0.4"/>
+    <!-- Edges -->
+    <path d="M3 63L35 2" stroke="#555555" stroke-width="0.4"/>
+    <path d="M67 63L35 2" stroke="#666666" stroke-width="0.4"/>
+    <path d="M35 21.6v41.4" stroke="#2a2a2a" stroke-width="0.25"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="95" y="52" font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-size="36" font-weight="500" letter-spacing="0.12em" fill="#ffffff">
+    AAXELERA
+  </text>
+</svg>
