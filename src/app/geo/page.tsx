@@ -458,6 +458,50 @@ export default function GeoPage() {
           </div>
         </SectionWrapper>
 
+        {/* Founder */}
+        <SectionWrapper>
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="glass-card p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              {/* Headshot placeholder */}
+              <div className="flex-shrink-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center overflow-hidden">
+                  {/* Replace with <Image src="/monty.jpg" ... /> when photo is added */}
+                  <span className="text-4xl md:text-5xl font-bold text-white/20">
+                    MP
+                  </span>
+                </div>
+              </div>
+
+              {/* Bio */}
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 tracking-tight">
+                  Montgomery Pruss
+                </h3>
+                <p className="text-white/40 text-sm font-medium tracking-[0.1em] uppercase mb-4">
+                  Founder, Aaxelera
+                </p>
+                <p className="text-white/40 text-sm leading-relaxed font-light mb-3">
+                  I build AI-powered growth systems that get local businesses found
+                  by ChatGPT, Google AI, and Perplexity — before their competitors
+                  figure it out. Every tool in this system I built myself, from the
+                  audit engine to the outreach pipeline.
+                </p>
+                <p className="text-white/40 text-sm leading-relaxed font-light">
+                  I work with dentists, law firms, and service businesses across
+                  the US who are ready to stop guessing and start tracking every
+                  call, every lead, every dollar.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </SectionWrapper>
+
         {/* Final CTA */}
         <SectionWrapper className="py-32 md:py-40">
           <div className="max-w-3xl mx-auto text-center">
