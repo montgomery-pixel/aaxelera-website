@@ -15,7 +15,7 @@ export const NAV_LINKS = [
   { label: "About", href: `#${SECTION_IDS.promise}` },
   { label: "Solutions", href: `#${SECTION_IDS.solution}` },
   { label: "Results", href: `#${SECTION_IDS.promise}` },
-  { label: "Insights", href: `#${SECTION_IDS.proptech}` },
+  { label: "GEO", href: `/geo` },
   { label: "Contact", href: `#${SECTION_IDS.cta}` },
 ];
 
