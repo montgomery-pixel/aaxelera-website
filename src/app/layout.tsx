@@ -15,13 +15,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Aaxelera | AI-Powered Demo Pipeline for PropTech SaaS",
+  title: "Aaxelera | AI Search Visibility for Local Businesses",
   description:
-    "AI SDRs and message testing systems that help PropTech SaaS teams book 30-60 qualified demos per month without adding headcount.",
+    "Get found by ChatGPT, Google AI, and Perplexity. Aaxelera helps dentists, lawyers, and local businesses dominate AI search with the GEO Growth System.",
   openGraph: {
-    title: "Aaxelera | PropTech Demo Pipeline",
+    title: "Aaxelera | Is AI Recommending Your Business?",
     description:
-      "Book 30-60 qualified demos/month with AI-powered outbound.",
+      "40% of local searches now touch AI. Get visible with the GEO Growth System.",
     url: "https://aaxelera.com",
     type: "website",
   },

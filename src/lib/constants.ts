@@ -5,132 +5,145 @@ export const SECTION_IDS = {
   promise: "promise",
   problem: "problem",
   solution: "solution",
-  proptech: "proptech",
+  pricing: "pricing",
   guarantee: "guarantee",
   cta: "cta",
 } as const;
 
 export const NAV_LINKS = [
   { label: "Home", href: `#${SECTION_IDS.hero}` },
-  { label: "About", href: `#${SECTION_IDS.promise}` },
-  { label: "Solutions", href: `#${SECTION_IDS.solution}` },
-  { label: "Results", href: `#${SECTION_IDS.promise}` },
-  { label: "Insights", href: `#${SECTION_IDS.proptech}` },
+  { label: "Why GEO", href: `#${SECTION_IDS.problem}` },
+  { label: "How It Works", href: `#${SECTION_IDS.solution}` },
+  { label: "Pricing", href: `#${SECTION_IDS.pricing}` },
   { label: "Contact", href: `#${SECTION_IDS.cta}` },
 ];
 
 export const METRICS = [
   {
-    value: 60,
-    prefix: "30-",
-    suffix: "",
-    label: "Qualified Demos Per Month",
+    value: 40,
+    prefix: "",
+    suffix: "%",
+    label: "of Searches Now Start With AI",
     description:
-      "Our AI SDR systems consistently deliver a predictable flow of qualified demo appointments, directly into your calendar.",
-    icon: "target",
+      "ChatGPT, Perplexity, and Google AI Overviews are replacing traditional search. If you're not visible there, you're invisible to nearly half your market.",
+    icon: "search",
   },
   {
-    value: 60,
+    value: 3,
     prefix: "",
-    suffix: "%+",
-    label: "Show Rates",
+    suffix: "x",
+    label: "More Calls From Optimized Businesses",
     description:
-      "Multi-touch confirmation sequences and smart scheduling ensure prospects actually show up to their demos.",
-    icon: "check",
+      "Local businesses with optimized GEO presence generate 3x more inbound calls than those relying on traditional SEO alone.",
+    icon: "phone",
   },
   {
-    value: 20,
+    value: 90,
     prefix: "",
-    suffix: "+",
-    label: "Hours Saved Monthly",
+    suffix: "%",
+    label: "of Local Businesses Aren't Ready",
     description:
-      "Reclaim your team's time by automating prospecting, outreach, follow-ups, and scheduling — without sacrificing quality.",
-    icon: "clock",
+      "The vast majority of local businesses have zero AI search optimization. Early movers dominate their market for years.",
+    icon: "chart",
   },
 ];
 
 export const SOLUTIONS = [
   {
-    title: "30-60 Qualified Demos Per Month",
+    title: "AI Visibility Audit",
     description:
-      "Our AI SDR systems consistently deliver a predictable flow of qualified demo appointments, directly into your calendar.",
+      "We analyze your presence across ChatGPT, Perplexity, Google SGE, and 50+ local directories. You get a GEO Score and a clear picture of where you stand vs. competitors.",
+    icon: "search",
+    step: "01",
+  },
+  {
+    title: "Local Growth Engine",
+    description:
+      "Neighborhood-targeted landing pages, structured data for AI crawlers, and GBP optimization — built to make you the answer when AI gets asked about your service area.",
     icon: "target",
   },
   {
-    title: "60%+ Show Rates",
+    title: "Review & Reputation System",
     description:
-      "Multi-touch confirmation sequences and smart scheduling ensure prospects actually show up to their demos.",
-    icon: "check",
+      "Automated review generation funnels that drive 5-star reviews to Google. Reviews feed AI training data — more reviews means more AI citations.",
+    icon: "star",
   },
   {
-    title: "20+ Hours Saved Monthly",
+    title: "Tracked Results, Not Guesswork",
     description:
-      "Reclaim your team's time by automating prospecting, outreach, follow-ups, and scheduling — without sacrificing quality.",
-    icon: "clock",
-  },
-  {
-    title: "Clear Attribution",
-    description:
-      "Know exactly which messages, channels, and sequences are driving your best demos with full-funnel analytics.",
+      "Call tracking, form attribution, and monthly GEO score reports. You see every lead source, every call recording, every ranking change. No black boxes.",
     icon: "chart",
   },
 ];
 
 export const COPY = {
   hero: {
-    headline: "Turn PropTech Data Into A",
-    headlineHighlight: "Predictable Demo Pipeline",
+    headline: "Your Customers Are Asking AI",
+    headlineHighlight: "Is AI Recommending You?",
     subheadline:
-      "AI SDRs and message testing systems that help PropTech SaaS teams book 30 to 60 qualified demos per month — without adding headcount.",
-    cta: "Book a Strategy Call",
-    ctaSecondary: "Request a Pipeline Audit",
+      "Aaxelera helps local businesses get found, recommended, and chosen by ChatGPT, Google AI, and Perplexity — before your competitors figure it out.",
+    cta: "Get Your Free GEO Audit",
+    ctaSecondary: "See How It Works",
   },
   promise: {
-    heading: "The Core Promise",
-    body: "Aaxelera integrates with your existing tools to build, test, and scale an AI-powered outbound engine purpose-built for PropTech SaaS. No fluff. No guesswork. Just a repeatable system that fills your pipeline with qualified demos.",
+    heading: "The Shift Is Already Here",
+    body: "40% of local searches now touch AI — and that number climbs every month. When someone asks ChatGPT for the best dentist, lawyer, or contractor in your city, are you the answer? If not, your competitors will be. Aaxelera is the growth system built for this new reality.",
   },
   problem: {
-    heading: "Why Your Current Demo Engine Stalls",
+    heading: "Why Local Businesses Are Losing Patients, Clients, and Calls",
     items: [
       {
-        title: "Manual Prospecting Bottlenecks",
+        title: "Invisible to AI Search",
         description:
-          "Your team spends hours hunting for leads instead of closing deals. Manual research doesn't scale.",
+          "ChatGPT, Perplexity, and Google AI Overviews are where your customers look first. Most local businesses don't show up at all — and don't even know it.",
       },
       {
-        title: "Generic Messaging That Gets Ignored",
+        title: "Great Service, Weak Online Presence",
         description:
-          "One-size-fits-all outreach gets lost in the noise. PropTech buyers need messages that speak their language.",
+          "You're good at what you do, but your website, reviews, and local listings don't reflect it. AI judges you on digital signals, not handshakes.",
       },
       {
-        title: "Inconsistent Pipeline Flow",
+        title: "Competitors Are Moving First",
         description:
-          "Feast-or-famine cycles kill momentum. Without a system, your pipeline depends on luck, not process.",
+          "The businesses investing in AI visibility now will own the top spots for years. Search rankings compound — late movers pay more to catch up.",
       },
       {
-        title: "No Clear Attribution",
+        title: "No Way to Measure What's Working",
         description:
-          "You can't improve what you can't measure. Most teams have no idea which channels actually drive demos.",
+          "Most local businesses can't tell you which marketing channel drove their last 10 customers. Without tracking, you're flying blind and overpaying.",
       },
     ],
   },
   solution: {
-    heading: "How Aaxelera Works",
+    heading: "How Aaxelera Gets You Found",
     subheading:
-      "A systematic approach to building your PropTech demo pipeline.",
+      "A systematic approach to making your business the one AI recommends.",
   },
-  proptech: {
-    heading: "Built For PropTech SaaS",
-    body: "We don't do generic. Aaxelera is built exclusively for PropTech SaaS companies. Every message template, every targeting filter, every automation sequence is designed around how property technology buyers actually evaluate, compare, and purchase software. That specificity is what drives our results.",
+  pricing: {
+    heading: "GEO Growth System",
+    subheading: "Everything your business needs to dominate AI search in your market.",
+    price: "$2,497",
+    period: "/mo",
+    setupFee: "$1,997 one-time setup",
+    commitment: "6-month minimum",
+    features: [
+      "Monthly GEO audit + AI visibility tracking",
+      "2 neighborhood landing pages per month",
+      "Call & form conversion tracking (every lead attributed)",
+      "Automated review generation on Google + Facebook",
+      "Google Business Profile optimization + weekly posts",
+      "Monthly strategy call + performance report",
+      "Dedicated Slack channel for your team",
+    ],
   },
   guarantee: {
-    heading: "The 20-Hour Time Savings Guarantee",
-    body: "We're so confident in our systems that we guarantee your team will save at least 20 hours per month on prospecting and outreach within the first 90 days — or we'll continue working with you at no additional cost until you do.",
+    heading: "The Tracked-Results Guarantee",
+    body: "Every call, every form submission, every ranking change — tracked and reported. You'll see exactly where your leads come from. If you don't see measurable growth in tracked inbound calls within 90 days, we keep working at no additional cost until you do.",
   },
   finalCta: {
-    heading: "Ready to Build Your Demo Pipeline?",
+    heading: "See Where You Stand — Free",
     subheading:
-      "Let's talk about how Aaxelera can help your PropTech SaaS team book more qualified demos.",
-    cta: "Book a Strategy Call",
+      "Get a personalized GEO Audit showing your AI visibility score, competitor comparison, and the exact gaps costing you customers. No commitment, no credit card.",
+    cta: "Get Your Free GEO Audit",
   },
 };

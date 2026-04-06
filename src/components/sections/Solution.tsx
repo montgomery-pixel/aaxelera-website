@@ -6,19 +6,19 @@ import GlassCard from "@/components/ui/GlassCard";
 import { COPY, SOLUTIONS, SECTION_IDS } from "@/lib/constants";
 
 const solutionIcons: Record<string, React.ReactNode> = {
+  search: (
+    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
+    </svg>
+  ),
   target: (
     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
     </svg>
   ),
-  check: (
+  star: (
     <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  ),
-  clock: (
-    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
     </svg>
   ),
   chart: (
@@ -57,8 +57,13 @@ export default function Solution() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <GlassCard className="h-full">
-                <div className="text-white/40 mb-4">
-                  {solutionIcons[sol.icon]}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="text-white/40">
+                    {solutionIcons[sol.icon]}
+                  </div>
+                  <span className="text-xs font-medium text-white/20 tracking-[0.15em] uppercase">
+                    Step {String(i + 1).padStart(2, "0")}
+                  </span>
                 </div>
                 <h3 className="text-lg font-medium text-white mb-3">
                   {sol.title}

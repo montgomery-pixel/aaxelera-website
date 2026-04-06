@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-base font-medium tracking-[0.1em] uppercase text-white/60 mb-4">Aaxelera</h3>
             <p className="text-white/25 text-sm leading-relaxed font-light">
-              AI-powered demo pipeline systems built exclusively for PropTech SaaS teams.
+              AI search visibility and growth systems for local businesses. Get found by ChatGPT, Google AI, and Perplexity.
             </p>
           </div>
           <div>
@@ -28,12 +28,12 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-white/25 hover:text-white/60 transition-colors text-sm font-light">
-                  Book a Call
+                  Free GEO Audit
                 </a>
               </li>
               <li>
                 <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-white/25 hover:text-white/60 transition-colors text-sm font-light">
-                  Pipeline Audit
+                  Book a Strategy Call
                 </a>
               </li>
             </ul>

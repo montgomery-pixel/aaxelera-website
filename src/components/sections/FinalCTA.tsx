@@ -23,7 +23,7 @@ export default function FinalCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button variant="primary">{COPY.finalCta.cta}</Button>
-            <Button variant="secondary">Get The Demo Pipeline Playbook</Button>
+            <Button variant="secondary">See Pricing</Button>
           </div>
         </motion.div>
       </div>

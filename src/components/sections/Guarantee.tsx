@@ -23,7 +23,7 @@ export default function Guarantee() {
             <p className="text-white/40 text-base leading-relaxed max-w-2xl mx-auto mb-8 font-light">
               {COPY.guarantee.body}
             </p>
-            <Button variant="primary">Talk To An AI SDR Specialist</Button>
+            <Button variant="primary">Get Your Free GEO Audit</Button>
           </div>
         </motion.div>
       </div>

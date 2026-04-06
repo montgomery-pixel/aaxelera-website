@@ -9,7 +9,7 @@ import Hero from "@/components/sections/Hero";
 import CorePromise from "@/components/sections/CorePromise";
 import Problem from "@/components/sections/Problem";
 import Solution from "@/components/sections/Solution";
-import PropTechFocus from "@/components/sections/PropTechFocus";
+import Pricing from "@/components/sections/Pricing";
 import Guarantee from "@/components/sections/Guarantee";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/layout/Footer";
@@ -65,7 +65,7 @@ export default function Home() {
             <CorePromise />
             <Problem />
             <Solution />
-            <PropTechFocus />
+            <Pricing />
             <Guarantee />
             <FinalCTA />
           </main>
