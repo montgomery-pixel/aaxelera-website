@@ -345,16 +345,11 @@ export default function GeoPage() {
               <div className="absolute -top-20 -right-20 w-60 h-60 bg-cyan-500/5 rounded-full blur-3xl" />
               <div className="relative z-10">
                 <div className="text-center mb-10">
-                  <div className="flex items-baseline justify-center gap-1 mb-2">
-                    <span className="text-5xl md:text-6xl font-bold text-white tracking-tight">
-                      $2,497
-                    </span>
-                    <span className="text-xl text-white/40 font-light">
-                      /mo
-                    </span>
-                  </div>
-                  <p className="text-white/30 text-sm font-light">
-                    $1,997 one-time setup &middot; 6-month minimum
+                  <p className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-3">
+                    Is AI recommending your competitors?
+                  </p>
+                  <p className="text-white/40 text-sm font-light max-w-lg mx-auto">
+                    Get a free GEO audit and see exactly how AI search engines see your business vs. the practice down the street.
                   </p>
                 </div>
 
@@ -380,9 +375,9 @@ export default function GeoPage() {
                 </div>
 
                 <div className="text-center space-y-4">
-                  <Button variant="primary">Book a Strategy Call</Button>
+                  <Button variant="primary">Get Your Free GEO Audit</Button>
                   <p className="text-white/20 text-xs font-light">
-                    Start with a free GEO audit — no commitment required
+                    See how AI ranks you vs. your competitors — takes 2 minutes
                   </p>
                 </div>
               </div>
@@ -398,22 +393,22 @@ export default function GeoPage() {
             >
               {[
                 {
+                  stat: "71% of patients",
+                  value: "use Google to find a dentist",
+                  detail:
+                    "AI now answers before they ever click a website",
+                },
+                {
+                  stat: "60% of searches",
+                  value: "end without a single click",
+                  detail:
+                    "AI gives the answer — if you're not in it, you're invisible",
+                },
+                {
                   stat: "1 new patient",
-                  value: "= $1,500 lifetime value",
+                  value: "= $10,000+ lifetime value",
                   detail:
-                    "2 extra patients/month pays for the system",
-                },
-                {
-                  stat: "1 signed case",
-                  value: "= $5,000-$25,000",
-                  detail:
-                    "1 case every 2 months covers a year of investment",
-                },
-                {
-                  stat: "1 HVAC install",
-                  value: "= $8,000 average ticket",
-                  detail:
-                    "1 job covers 3+ months of your growth system",
+                    "How many are going to the practice AI recommends instead of yours?",
                 },
               ].map((item) => (
                 <div key={item.stat} className="glass-card p-5 text-center">
@@ -458,49 +453,7 @@ export default function GeoPage() {
           </div>
         </SectionWrapper>
 
-        {/* Founder */}
-        <SectionWrapper>
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              className="glass-card p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
-              {/* Headshot placeholder */}
-              <div className="flex-shrink-0">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center overflow-hidden">
-                  {/* Replace with <Image src="/monty.jpg" ... /> when photo is added */}
-                  <span className="text-4xl md:text-5xl font-bold text-white/20">
-                    MP
-                  </span>
-                </div>
-              </div>
-
-              {/* Bio */}
-              <div className="text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 tracking-tight">
-                  Montgomery Pruss
-                </h3>
-                <p className="text-white/40 text-sm font-medium tracking-[0.1em] uppercase mb-4">
-                  Founder, Aaxelera
-                </p>
-                <p className="text-white/40 text-sm leading-relaxed font-light mb-3">
-                  I build AI-powered growth systems that get local businesses found
-                  by ChatGPT, Google AI, and Perplexity — before their competitors
-                  figure it out. Every tool in this system I built myself, from the
-                  audit engine to the outreach pipeline.
-                </p>
-                <p className="text-white/40 text-sm leading-relaxed font-light">
-                  I work with dentists, law firms, and service businesses across
-                  the US who are ready to stop guessing and start tracking every
-                  call, every lead, every dollar.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </SectionWrapper>
+        {/* Founder bio moved to Final CTA section */}
 
         {/* Final CTA */}
         <SectionWrapper className="py-32 md:py-40">
@@ -525,6 +478,9 @@ export default function GeoPage() {
                   Book a Strategy Call
                 </Button>
               </div>
+              <p className="text-white/20 text-xs font-light mt-8">
+                Built by Montgomery Pruss — I work with dentists and local businesses across the US who are ready to stop guessing and start tracking every call, every lead, every dollar.
+              </p>
             </motion.div>
           </div>
         </SectionWrapper>

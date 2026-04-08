@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Is AI Recommending Your Business? | Aaxelera GEO",
     description:
-      "40% of local searches now touch AI. Get visible with the GEO Growth System — $2,497/mo.",
+      "40% of local searches now touch AI. Get a free GEO audit and see how AI search engines rank your business.",
     url: "https://aaxelera.com/geo",
     type: "website",
   },
