@@ -16,14 +16,14 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aaxelera.com"),
-  title: "Aaxelera | Get Your Business Found in AI Search",
+  title: "Aaxelera | AI Search Visibility & AI-Powered Lead Generation",
   description:
-    "Aaxelera helps businesses show up when customers ask ChatGPT, Perplexity, and Google AI for recommendations. AI search visibility (GEO) and AI-powered sales systems.",
+    "Aaxelera gets businesses found when customers ask ChatGPT, Perplexity, and Google AI for recommendations, and books qualified meetings with AI-powered lead generation systems.",
   alternates: { canonical: "https://aaxelera.com" },
   openGraph: {
-    title: "Aaxelera | AI Search Visibility",
+    title: "Aaxelera | AI Search Visibility & Lead Generation",
     description:
-      "Show up when customers ask AI for recommendations. GEO and AI-powered sales systems by Aaxelera.",
+      "Get found in AI search and fill your pipeline with AI-powered lead generation. Both built by Aaxelera.",
     url: "https://aaxelera.com",
     siteName: "Aaxelera",
     type: "website",
@@ -42,7 +42,7 @@ const ORG_SCHEMA = {
   url: "https://aaxelera.com",
   logo: "https://aaxelera.com/logo.svg",
   description:
-    "Aaxelera helps businesses get found in AI search (ChatGPT, Perplexity, Google AI) and builds AI-powered sales systems.",
+    "Aaxelera gets businesses found in AI search (ChatGPT, Perplexity, Google AI) and books qualified meetings with AI-powered lead generation systems.",
   founder: { "@type": "Person", name: "Montgomery Pruss" },
   sameAs: [
     "https://www.youtube.com/@AaxeleraPod",

@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-base font-medium tracking-[0.1em] uppercase text-white/60 mb-4">Aaxelera</h3>
             <p className="text-white/25 text-sm leading-relaxed font-light">
-              Aaxelera helps businesses get found in AI search and builds AI-powered sales systems.
+              AI search visibility and AI-powered lead generation systems that fill your pipeline.
             </p>
             <ul className="space-y-2 mt-4">
               <li>
