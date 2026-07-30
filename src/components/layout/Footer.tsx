@@ -8,8 +8,20 @@ export default function Footer() {
           <div>
             <h3 className="text-base font-medium tracking-[0.1em] uppercase text-white/60 mb-4">Aaxelera</h3>
             <p className="text-white/25 text-sm leading-relaxed font-light">
-              AI-powered demo pipeline systems built exclusively for PropTech SaaS teams.
+              Aaxelera helps businesses get found in AI search and builds AI-powered sales systems.
             </p>
+            <ul className="space-y-2 mt-4">
+              <li>
+                <a href="https://www.youtube.com/@AaxeleraPod" target="_blank" rel="noopener noreferrer" className="text-white/25 hover:text-white/60 transition-colors text-sm font-light">
+                  YouTube
+                </a>
+              </li>
+              <li>
+                <a href="https://podcasts.apple.com/us/podcast/the-aaxelera-podcast/id1858952309" target="_blank" rel="noopener noreferrer" className="text-white/25 hover:text-white/60 transition-colors text-sm font-light">
+                  The Aaxelera Podcast
+                </a>
+              </li>
+            </ul>
           </div>
           <div>
             <h4 className="text-[11px] font-medium text-white/40 uppercase tracking-[0.15em] mb-4">Quick Links</h4>

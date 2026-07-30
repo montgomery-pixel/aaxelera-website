@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import LandingGate from "@/components/sections/LandingGate";
@@ -30,9 +30,19 @@ const GlslHillsBg = dynamic(
 export default function Home() {
   const [entered, setEntered] = useState(false);
 
+  // Lock scroll while the gate overlays the (always-rendered) main site.
+  useEffect(() => {
+    document.body.style.overflow = entered ? "" : "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [entered]);
+
   return (
     <>
-      {/* Stage 1: Landing gate with shader lines */}
+      {/* Stage 1: Landing gate with shader lines. Rendered as an OVERLAY so the
+          main site below stays in the server-rendered HTML — crawlers and AI
+          engines must see the full page content without clicking through. */}
       <AnimatePresence>
         {!entered && (
           <motion.div
@@ -46,32 +56,28 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* Stage 2: Main site */}
-      {entered && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          {/* Fixed GLSL hills background */}
+      {/* Stage 2: Main site — always rendered; the gate covers it until entry. */}
+      <div>
+        {/* Fixed GLSL hills background (client-only; skipped until entry for perf) */}
+        {entered && (
           <div className="fixed inset-0 z-0 opacity-40">
             <GlslHillsBg />
           </div>
+        )}
 
-          <StarfieldWrapper />
-          <Navbar />
-          <main className="relative z-10">
-            <Hero />
-            <CorePromise />
-            <Problem />
-            <Solution />
-            <PropTechFocus />
-            <Guarantee />
-            <FinalCTA />
-          </main>
-          <Footer />
-        </motion.div>
-      )}
+        {entered && <StarfieldWrapper />}
+        <Navbar />
+        <main className="relative z-10">
+          <Hero />
+          <CorePromise />
+          <Problem />
+          <Solution />
+          <PropTechFocus />
+          <Guarantee />
+          <FinalCTA />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
