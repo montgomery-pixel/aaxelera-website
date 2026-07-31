@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 
 const ShaderLines = dynamic(
   () =>
@@ -36,34 +35,9 @@ export default function LandingGate({ onEnter }: LandingGateProps) {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          {/* Pyramid logo */}
-          <motion.div
-            className="relative"
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          >
-            {/* Glow behind logo */}
-            <div className="absolute inset-0 blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700">
-              <Image
-                src="/logo.svg"
-                alt=""
-                width={120}
-                height={120}
-                className="w-[120px] h-[120px] brightness-200"
-              />
-            </div>
-            <Image
-              src="/logo.svg"
-              alt="Aaxelera"
-              width={100}
-              height={100}
-              className="w-[100px] h-[100px] md:w-[120px] md:h-[120px] drop-shadow-2xl"
-            />
-          </motion.div>
-
-          {/* Brand name */}
+          {/* Brand name — sole focal point, centered */}
           <motion.span
-            className="text-2xl md:text-3xl font-light tracking-[0.3em] uppercase text-white/80 group-hover:text-white transition-colors duration-500"
+            className="text-3xl md:text-5xl font-light tracking-[0.3em] uppercase text-white/80 group-hover:text-white transition-colors duration-500"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
