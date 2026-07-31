@@ -42,9 +42,9 @@ export const METRICS = [
     value: 20,
     prefix: "",
     suffix: "+",
-    label: "Hours Saved Monthly",
+    label: "Hours Saved Weekly",
     description:
-      "Reclaim your team's time by automating prospecting, outreach, follow-ups, and scheduling — without sacrificing quality.",
+      "Reclaim your team's time by automating prospecting, outreach, follow-ups, and scheduling, without sacrificing quality.",
     icon: "clock",
   },
 ];
@@ -63,9 +63,9 @@ export const SOLUTIONS = [
     icon: "check",
   },
   {
-    title: "20+ Hours Saved Monthly",
+    title: "20+ Hours Saved Weekly",
     description:
-      "Reclaim your team's time by automating prospecting, outreach, follow-ups, and scheduling — without sacrificing quality.",
+      "Reclaim your team's time by automating prospecting, outreach, follow-ups, and scheduling, without sacrificing quality.",
     icon: "clock",
   },
   {
@@ -81,7 +81,7 @@ export const COPY = {
     headline: "Turn PropTech Data Into A",
     headlineHighlight: "Predictable Demo Pipeline",
     subheadline:
-      "AI SDRs and message testing systems that help PropTech SaaS teams book 30 to 60 qualified demos per month — without adding headcount.",
+      "AI SDRs and message testing systems that help PropTech SaaS teams book 30 to 60 qualified demos per month, without adding headcount.",
     cta: "Book a Strategy Call",
     ctaSecondary: "Request a Pipeline Audit",
   },
@@ -125,7 +125,7 @@ export const COPY = {
   },
   guarantee: {
     heading: "The 20-Hour Time Savings Guarantee",
-    body: "We're so confident in our systems that we guarantee your team will save at least 20 hours per month on prospecting and outreach within the first 90 days — or we'll continue working with you at no additional cost until you do.",
+    body: "We're so confident in our systems that we guarantee your team will save at least 20 hours per month on prospecting and outreach within the first 90 days, or we'll continue working with you at no additional cost until you do.",
   },
   finalCta: {
     heading: "Ready to Build Your Demo Pipeline?",
