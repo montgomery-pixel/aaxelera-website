@@ -161,31 +161,37 @@ export default function GeoPage() {
                 The Shift Is Already Here
               </h2>
               <p className="text-white/40 text-base max-w-2xl mx-auto leading-relaxed font-light">
-                40% of local searches now touch AI, and that number climbs
-                every month. When someone asks ChatGPT for the best clinic,
-                firm, or contractor in your city, are you the answer?
+                Search is turning into an answer, not a list of links. When
+                someone asks ChatGPT for the best clinic, firm, or contractor in
+                your city, you are either in that answer or you are not.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  value: 40,
+                  value: 68,
+                  decimals: 0,
                   suffix: "%",
-                  label: "of Searches Now Start With AI",
-                  desc: "ChatGPT, Perplexity, and Google AI Overviews are replacing traditional search. If you're not visible there, you're invisible to nearly half your market.",
+                  label: "of Google Searches End Without a Click",
+                  desc: "People get their answer on the results page and never visit a website at all. If your business isn't in that answer, there is nothing left to click.",
+                  source: "SparkToro, Similarweb clickstream panel, US, Jan to Apr 2026",
                 },
                 {
-                  value: 3,
+                  value: 3.2,
+                  decimals: 1,
                   suffix: "x",
-                  label: "More Calls From Optimized Businesses",
-                  desc: "Local businesses with optimized GEO presence generate 3x more inbound calls than those relying on traditional SEO alone.",
+                  label: "More Traffic For AI-Visible Local Sites",
+                  desc: "Local business sites that AI crawlers actually read pulled 3.2x the traffic, 2.7x the form fills, and 2.5x the click-to-call actions of the sites AI skipped.",
+                  source: "Duda, 858,457 small business websites, February 2026",
                 },
                 {
-                  value: 90,
+                  value: 49,
+                  decimals: 0,
                   suffix: "%",
-                  label: "of Local Businesses Aren't Ready",
-                  desc: "The vast majority of local businesses have zero AI search optimization. Early movers dominate their market for years.",
+                  label: "of ChatGPT Calls Are Qualified Leads",
+                  desc: "The highest lead rate of any channel measured, roughly 10 points above the all-channel average. People who ask AI first pick up the phone ready to buy.",
+                  source: "Invoca Lead Conversion Benchmarks 2026, 70M calls, 10 industries",
                 },
               ].map((m, i) => (
                 <motion.div
@@ -195,12 +201,13 @@ export default function GeoPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.15 }}
                 >
-                  <GlassCard className="text-center h-full">
+                  <GlassCard className="text-center h-full flex flex-col">
                     <div className="text-4xl md:text-5xl font-bold mb-3">
                       <AnimatedCounter
                         value={m.value}
                         prefix=""
                         suffix={m.suffix}
+                        decimals={m.decimals}
                       />
                     </div>
                     <h3 className="text-base font-medium text-white mb-2">
@@ -208,6 +215,9 @@ export default function GeoPage() {
                     </h3>
                     <p className="text-white/35 text-sm leading-relaxed font-light">
                       {m.desc}
+                    </p>
+                    <p className="text-white/20 text-[11px] leading-relaxed font-light mt-4 pt-3 border-t border-white/5">
+                      {m.source}
                     </p>
                   </GlassCard>
                 </motion.div>
@@ -393,10 +403,10 @@ export default function GeoPage() {
             >
               {[
                 {
-                  stat: "60% of searches",
-                  value: "end without a single click",
+                  stat: "Your actual queries",
+                  value: "not keyword rankings",
                   detail:
-                    "The AI answers first. If you're not in that answer, you never get the call",
+                    "We run the questions your customers really ask, on the engines they ask them on",
                 },
                 {
                   stat: "2 of 3 runs",

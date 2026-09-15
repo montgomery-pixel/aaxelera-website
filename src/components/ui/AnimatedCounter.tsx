@@ -8,6 +8,7 @@ interface AnimatedCounterProps {
   value: number;
   prefix?: string;
   suffix?: string;
+  decimals?: number;
   duration?: number;
   className?: string;
 }
@@ -16,13 +17,14 @@ export default function AnimatedCounter({
   value,
   prefix = "",
   suffix = "",
+  decimals = 0,
   duration = 2,
   className = "",
 }: AnimatedCounterProps) {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
   const motionValue = useMotionValue(0);
-  const rounded = useTransform(motionValue, (v) => Math.round(v));
-  const [displayValue, setDisplayValue] = useState(0);
+  const rounded = useTransform(motionValue, (v) => v.toFixed(decimals));
+  const [displayValue, setDisplayValue] = useState((0).toFixed(decimals));
   const hasAnimated = useRef(false);
 
   useEffect(() => {
