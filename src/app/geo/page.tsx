@@ -66,7 +66,7 @@ const STEPS = [
     step: "02",
     title: "Local Growth Engine",
     description:
-      "Neighborhood-targeted landing pages, structured data for AI crawlers, and GBP optimization — built to make you the answer when AI gets asked about your service area.",
+      "Neighborhood-targeted landing pages, structured data for AI crawlers, and GBP optimization, built to make you the answer when AI gets asked about your service area.",
     icon: (
       <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
@@ -77,7 +77,7 @@ const STEPS = [
     step: "03",
     title: "Review & Reputation System",
     description:
-      "Automated review generation funnels that drive 5-star reviews to Google. Reviews feed AI training data — more reviews means more AI citations.",
+      "Automated review generation funnels that drive 5-star reviews to Google. Reviews feed AI training data. More reviews means more AI citations.",
     icon: (
       <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -131,7 +131,7 @@ export default function GeoPage() {
               variants={itemVariants}
             >
               Aaxelera helps local businesses get found, recommended, and chosen
-              by ChatGPT, Google AI, and Perplexity — before your competitors
+              by ChatGPT, Google AI, and Perplexity, before your competitors
               figure it out.
             </motion.p>
 
@@ -161,9 +161,9 @@ export default function GeoPage() {
                 The Shift Is Already Here
               </h2>
               <p className="text-white/40 text-base max-w-2xl mx-auto leading-relaxed font-light">
-                40% of local searches now touch AI — and that number climbs
-                every month. When someone asks ChatGPT for the best dentist,
-                lawyer, or contractor in your city, are you the answer?
+                40% of local searches now touch AI, and that number climbs
+                every month. When someone asks ChatGPT for the best clinic,
+                firm, or contractor in your city, are you the answer?
               </p>
             </motion.div>
 
@@ -241,7 +241,7 @@ export default function GeoPage() {
                 },
                 {
                   title: "Competitors Are Moving First",
-                  desc: "The businesses investing in AI visibility now will own the top spots for years. Search rankings compound — late movers pay more to catch up.",
+                  desc: "The businesses investing in AI visibility now will own the top spots for years. Search rankings build on themselves, and late movers pay more to catch up.",
                 },
                 {
                   title: "No Way to Measure What's Working",
@@ -349,7 +349,7 @@ export default function GeoPage() {
                     Is AI recommending your competitors?
                   </p>
                   <p className="text-white/40 text-sm font-light max-w-lg mx-auto">
-                    Get a free GEO audit and see exactly how AI search engines see your business vs. the practice down the street.
+                    Get a free GEO audit and see exactly how AI search engines see your business vs. the business down the street.
                   </p>
                 </div>
 
@@ -377,7 +377,7 @@ export default function GeoPage() {
                 <div className="text-center space-y-4">
                   <Button variant="primary">Get Your Free GEO Audit</Button>
                   <p className="text-white/20 text-xs font-light">
-                    See how AI ranks you vs. your competitors — takes 2 minutes
+                    See how AI ranks you vs. your competitors. Takes 2 minutes
                   </p>
                 </div>
               </div>
@@ -393,22 +393,22 @@ export default function GeoPage() {
             >
               {[
                 {
-                  stat: "71% of patients",
-                  value: "use Google to find a dentist",
-                  detail:
-                    "AI now answers before they ever click a website",
-                },
-                {
                   stat: "60% of searches",
                   value: "end without a single click",
                   detail:
-                    "AI gives the answer — if you're not in it, you're invisible",
+                    "The AI answers first. If you're not in that answer, you never get the call",
                 },
                 {
-                  stat: "1 new patient",
-                  value: "= $10,000+ lifetime value",
+                  stat: "2 of 3 runs",
+                  value: "is the bar we score you against",
                   detail:
-                    "How many are going to the practice AI recommends instead of yours?",
+                    "We ask AI the questions your customers actually ask, then log whether it names you, cites you, or skips you",
+                },
+                {
+                  stat: "1 new client",
+                  value: "can pay for the whole year",
+                  detail:
+                    "How many are going to the business AI recommends instead of yours?",
                 },
               ].map((item) => (
                 <div key={item.stat} className="glass-card p-5 text-center">
@@ -442,7 +442,7 @@ export default function GeoPage() {
                   The Tracked-Results Guarantee
                 </h2>
                 <p className="text-white/40 text-base leading-relaxed max-w-2xl mx-auto mb-8 font-light">
-                  Every call, every form submission, every ranking change —
+                  Every call, every form submission, every ranking change gets
                   tracked and reported. If you don&apos;t see measurable growth in
                   tracked inbound calls within 90 days, we keep working at no
                   additional cost until you do.
@@ -465,7 +465,7 @@ export default function GeoPage() {
               transition={{ duration: 0.7 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white tracking-tight">
-                See Where You Stand — Free
+                See Where You Stand (Free)
               </h2>
               <p className="text-white/40 text-base mb-10 max-w-xl mx-auto leading-relaxed font-light">
                 Get a personalized GEO Audit showing your AI visibility score,
@@ -479,7 +479,7 @@ export default function GeoPage() {
                 </Button>
               </div>
               <p className="text-white/20 text-xs font-light mt-8">
-                Built by Montgomery Pruss — I work with dentists and local businesses across the US who are ready to stop guessing and start tracking every call, every lead, every dollar.
+                Built by Montgomery Pruss. I work with clinics, practices, firms, and local businesses across the US who are ready to stop guessing and start tracking every call, every lead, every dollar.
               </p>
             </motion.div>
           </div>
