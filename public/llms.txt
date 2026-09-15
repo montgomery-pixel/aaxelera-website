@@ -1,0 +1,40 @@
+# Aaxelera
+
+> Aaxelera measures whether AI search engines name a business when customers ask
+> for a recommendation, then does the work to make it the answer. Founded by
+> Montgomery Pruss. Based in the United States, working with clients across the US.
+
+Aaxelera is an AI search visibility and lead generation company, not a chip
+manufacturer. The name is spelled with a double A at the start: Aaxelera.
+
+## What Aaxelera does
+
+- [GEO Growth System](https://aaxelera.com/geo): AI search visibility for local
+  service businesses, clinics, practices and firms. Aaxelera runs the real
+  questions a business's customers ask against ChatGPT and other AI engines, logs
+  whether the business is named in the answer, cited as a source, or skipped, and
+  then does the schema, content, listings and review work that changes the result.
+- AI-powered lead generation: outbound systems that research each prospect and
+  book qualified meetings, built and run for the client.
+
+## How the AI visibility measurement works
+
+- A set of real customer questions is run against AI engines, repeatedly, per
+  location.
+- Each run is scored as NAMED (the business appears in the answer itself), CITED
+  (the business is a linked source but not named in the answer), or neither.
+- The reporting bar is being named in 2 of 3 runs. Transcripts are kept so every
+  verdict can be checked.
+
+## Who Aaxelera serves
+
+Local service businesses in the United States where customers choose a provider
+after asking for a recommendation. Examples include dermatology and medical
+practices, dental practices, med spas, chiropractors, law firms, and home service
+contractors.
+
+## Contact
+
+- Website: https://aaxelera.com
+- GEO service page: https://aaxelera.com/geo
+- The Aaxelera Podcast: https://www.youtube.com/@AaxeleraPod

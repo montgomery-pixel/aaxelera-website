@@ -12,6 +12,29 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image" },
+  alternates: { canonical: "/geo" },
+};
+
+// The service this page sells, stated for AI crawlers rather than left implied
+// in marketing prose. Mirrors what our own audits grade clients on.
+const SERVICE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "GEO Growth System",
+  serviceType: "Generative Engine Optimization",
+  description:
+    "Aaxelera measures whether AI search engines name a local business when customers ask for a recommendation, then does the work to make it the answer.",
+  provider: {
+    "@type": "Organization",
+    name: "Aaxelera",
+    url: "https://aaxelera.com",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Local service businesses, clinics, practices and firms",
+  },
+  url: "https://aaxelera.com/geo",
 };
 
 export default function GeoLayout({
@@ -19,5 +42,13 @@ export default function GeoLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
+      />
+      {children}
+    </>
+  );
 }

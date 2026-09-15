@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Aaxelera | AI Search Visibility & AI-Powered Lead Generation",
   description:
     "Aaxelera gets businesses found when customers ask ChatGPT, Perplexity, and Google AI for recommendations, and books qualified meetings with AI-powered lead generation systems.",
-  alternates: { canonical: "https://aaxelera.com" },
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Aaxelera | AI Search Visibility & Lead Generation",
     description:

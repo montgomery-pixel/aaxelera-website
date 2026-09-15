@@ -24,7 +24,9 @@ export default function AnimatedCounter({
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
   const motionValue = useMotionValue(0);
   const rounded = useTransform(motionValue, (v) => v.toFixed(decimals));
-  const [displayValue, setDisplayValue] = useState((0).toFixed(decimals));
+  // Render the real figure on the server so crawlers and no-JS readers get the
+  // number, not a zero. The animation takes over from zero once it scrolls in.
+  const [displayValue, setDisplayValue] = useState(() => value.toFixed(decimals));
   const hasAnimated = useRef(false);
 
   useEffect(() => {
