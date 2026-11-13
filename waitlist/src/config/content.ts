@@ -24,10 +24,10 @@ export const header = {
 
 export const hero = {
   eyebrow: "Launching soon in the US",
-  headline: "Home security that knows a burglar from the neighbor's cat.",
-  subheadline: `AI spots people and vehicles, trained operators confirm what is real, and you install it yourself in about ${setupMinutes} minutes. Planned price: ${price}/month, with no contract.`,
+  headline: "Home security with a real person behind every alarm.",
+  subheadline: `AI filters out pets, shadows and passing cars. A trained operator checks the video before anyone calls for help. Install it yourself in about ${setupMinutes} minutes. Planned price: ${price}/month, with no contract.`,
   formNote: `Join the waitlist to lock in early-bird pricing. ${brand} is not available yet. We will email you when it launches.`,
-  bullets: ["No contract", "No technician visit", "Cellular backup"],
+  bullets: ["Human-verified alarms", "No contract", "No technician visit"],
   illustrationCaption: "Illustration of the planned app. Not real footage.",
 };
 
@@ -74,18 +74,18 @@ export const howItWorks = {
 };
 
 export const benefits = {
-  title: "Built to cut the noise and act on what is real",
+  title: "An alarm someone has actually looked at",
   intro: `What ${brand} is being designed to do.`,
   items: [
-    {
-      icon: "filter",
-      title: "AI that filters false alarms",
-      body: "Detects people and vehicles, and is designed to ignore pets, shadows and cars passing by, so alerts mean something.",
-    },
     {
       icon: "person",
       title: "Verified by real people",
       body: "Operators review AI-flagged events around the clock before anything is escalated. Verified alarms carry video evidence, and many US police departments give unverified alarms lower priority.",
+    },
+    {
+      icon: "filter",
+      title: "AI that filters false alarms",
+      body: "Detects people and vehicles, and is designed to ignore pets, shadows and cars passing by, so alerts mean something.",
     },
     {
       icon: "unlock",
@@ -106,8 +106,8 @@ export const benefits = {
 };
 
 export const pricing = {
-  title: "Professional monitoring for about half the usual price",
-  intro: "Planned pricing compared with what monitored home security typically costs.",
+  title: `Human-verified monitoring for ${price} a month`,
+  intro: "Planned pricing, compared with monitored plans from traditional providers.",
   ours: {
     label: brand,
     tag: "Planned early-bird price",
