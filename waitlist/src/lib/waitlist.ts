@@ -57,3 +57,48 @@ export async function submitSignup(signup: Signup): Promise<SubmitResult> {
     return { ok: false, reason: "failed" };
   }
 }
+
+export type BusinessLead = {
+  email: string;
+  company: string;
+  industry?: string;
+  sites?: string;
+  attribution: Attribution;
+};
+
+/** Saves one business pilot request to the business_leads table. */
+export async function submitBusinessLead(lead: BusinessLead): Promise<SubmitResult> {
+  if (!isWaitlistConfigured) return { ok: false, reason: "not_configured" };
+
+  const row = {
+    email: lead.email.trim().toLowerCase(),
+    company: lead.company.trim().slice(0, 200),
+    industry: lead.industry || null,
+    sites: lead.sites || null,
+    utm_source: lead.attribution.utm_source ?? null,
+    utm_medium: lead.attribution.utm_medium ?? null,
+    utm_campaign: lead.attribution.utm_campaign ?? null,
+    utm_content: lead.attribution.utm_content ?? null,
+    utm_term: lead.attribution.utm_term ?? null,
+    referrer: lead.attribution.referrer ?? null,
+    landing_page: lead.attribution.landing_page ?? null,
+  };
+
+  try {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/business_leads`, {
+      method: "POST",
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        "Content-Type": "application/json",
+        Prefer: "return=minimal",
+      },
+      body: JSON.stringify(row),
+    });
+    if (response.ok) return { ok: true, duplicate: false };
+    if (response.status === 409) return { ok: true, duplicate: true };
+    return { ok: false, reason: "failed" };
+  } catch {
+    return { ok: false, reason: "failed" };
+  }
+}

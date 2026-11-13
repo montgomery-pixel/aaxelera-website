@@ -3,7 +3,7 @@ import { header } from "@/config/content";
 import { site } from "@/config/site";
 import { Logo } from "./Illustrations";
 
-export function Header({ showCta = true }: { showCta?: boolean }) {
+export function Header({ showCta = true, ctaLabel, ctaHref = "#join" }: { showCta?: boolean; ctaLabel?: string; ctaHref?: string }) {
   return (
     <header className="sticky top-0 z-20 border-b border-line/60 bg-ink/85 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
@@ -17,10 +17,10 @@ export function Header({ showCta = true }: { showCta?: boolean }) {
               {header.badge}
             </span>
             <a
-              href="#join"
+              href={ctaHref}
               className="rounded-md border border-accent/50 px-3 py-1.5 text-sm font-semibold text-accent transition-colors hover:bg-accent/10"
             >
-              {header.cta}
+              {ctaLabel ?? header.cta}
             </a>
           </div>
         ) : null}

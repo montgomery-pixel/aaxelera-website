@@ -42,3 +42,37 @@ create policy "Public can join the waitlist"
 -- from public.waitlist_signups
 -- group by 1, 2
 -- order by signups desc;
+
+
+-- Business pilot requests from the /business page.
+create table if not exists public.business_leads (
+  id            uuid primary key default gen_random_uuid(),
+  created_at    timestamptz not null default now(),
+  email         text not null
+                check (char_length(email) <= 254 and email ~ '^[^@\s]+@[^@\s]+\.[^@\s]+$'),
+  company       text not null check (char_length(company) between 1 and 200),
+  industry      text check (industry is null or industry in ('self_storage', 'car_dealership', 'construction', 'other')),
+  sites         text check (sites is null or sites in ('1', '2-5', '6+')),
+  utm_source    text check (char_length(utm_source) <= 300),
+  utm_medium    text check (char_length(utm_medium) <= 300),
+  utm_campaign  text check (char_length(utm_campaign) <= 300),
+  utm_content   text check (char_length(utm_content) <= 300),
+  utm_term      text check (char_length(utm_term) <= 300),
+  referrer      text check (char_length(referrer) <= 300),
+  landing_page  text check (char_length(landing_page) <= 300)
+);
+
+create unique index if not exists business_leads_email_key
+  on public.business_leads (lower(email));
+
+alter table public.business_leads enable row level security;
+
+revoke all on public.business_leads from anon, authenticated;
+grant insert on public.business_leads to anon;
+
+drop policy if exists "Public can request a pilot" on public.business_leads;
+create policy "Public can request a pilot"
+  on public.business_leads
+  for insert
+  to anon
+  with check (true);

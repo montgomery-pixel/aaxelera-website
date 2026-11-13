@@ -42,3 +42,24 @@ export function trackWaitlistSignup(details: { homeType?: string; hasZip: boolea
     window.gtag?.("event", "conversion", { send_to: GOOGLE_ADS_CONVERSION });
   }
 }
+
+const BUSINESS_FIRED_KEY = "business_conversion_fired";
+
+/** Fire the conversion for a business pilot request. Only fires once per tab session. */
+export function trackBusinessLead(details: { industry?: string }) {
+  if (typeof window === "undefined") return;
+  try {
+    if (window.sessionStorage.getItem(BUSINESS_FIRED_KEY)) return;
+    window.sessionStorage.setItem(BUSINESS_FIRED_KEY, "1");
+  } catch {
+    // If storage is blocked we still fire the event.
+  }
+  window.fbq?.("track", "Lead", { content_name: "business_pilot" });
+  window.gtag?.("event", "generate_lead", {
+    form: "business_pilot",
+    industry: details.industry ?? "not_given",
+  });
+  if (GOOGLE_ADS_CONVERSION) {
+    window.gtag?.("event", "conversion", { send_to: GOOGLE_ADS_CONVERSION });
+  }
+}
