@@ -8,6 +8,16 @@ A one-page waitlist site for a home security concept, built to receive paid traf
 
 This folder is self-contained. It lives inside the `aaxelera-website` repo for now and can be moved to its own repo by copying the folder.
 
+## Pages
+
+| Address | What it is | Copy lives in | Signups go to |
+|---|---|---|---|
+| `/` | Home security waitlist | `src/config/content.ts` | `waitlist_signups` table |
+| `/business` | Business monitoring pilot request | `src/config/business.ts` | `business_leads` table |
+| `/privacy` | Privacy policy | `src/app/privacy/page.tsx` | |
+
+Both tables are created by `supabase/schema.sql`. The business offer (price, camera count, hours, free trial length) is set at the top of `src/config/business.ts`.
+
 ## Run it on your computer
 
 ```bash
